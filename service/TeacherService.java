@@ -14,14 +14,14 @@ public class TeacherService implements UserService<Teacher> {
 
     @Override
     public void create(String firstName, String secondName, String lastName) {
-        int maxID = 0;
+        int maxId = 0;
         for (Teacher teacher : teachersList) {
-            if (maxID < teacher.getTeacherID()) {
-                maxID = teacher.getTeacherID();
+            if (maxId < teacher.getTeacherId()) {
+                maxId = teacher.getTeacherId();
             }
 
         }
-        teachersList.add(new Teacher(++maxID,firstName, secondName, lastName));
+        teachersList.add(new Teacher(++maxId,firstName, secondName, lastName));
 
     }
     public List<Teacher> getTeachersList() {
