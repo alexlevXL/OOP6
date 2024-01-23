@@ -2,6 +2,16 @@ package data;
 
 public class Teacher extends User implements Comparable<Teacher> {
     int teacherId;
+
+    private double rating;
+
+    public double getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
     public Teacher(int teacherId, String firstName, String secondName, String lastName) {
         super(firstName, secondName, lastName);
         this.teacherId = teacherId;}
